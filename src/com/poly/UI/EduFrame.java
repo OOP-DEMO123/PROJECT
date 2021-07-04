@@ -81,7 +81,7 @@ public class EduFrame extends javax.swing.JFrame {
 
         jToolBar1.setRollover(true);
 
-        btnDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Exit.png"))); // NOI18N
+        btnDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Closed door.png"))); // NOI18N
         btnDangNhap.setText("Đăng nhập");
         btnDangNhap.setFocusable(false);
         btnDangNhap.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -94,7 +94,7 @@ public class EduFrame extends javax.swing.JFrame {
         jToolBar1.add(btnDangNhap);
         jToolBar1.add(jSeparator1);
 
-        btnKetThuc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Stop.png"))); // NOI18N
+        btnKetThuc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Open door.png"))); // NOI18N
         btnKetThuc.setText("Kết thúc");
         btnKetThuc.setFocusable(false);
         btnKetThuc.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -107,7 +107,7 @@ public class EduFrame extends javax.swing.JFrame {
         jToolBar1.add(btnKetThuc);
         jToolBar1.add(jSeparator2);
 
-        btnSanPham.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Lists.png"))); // NOI18N
+        btnSanPham.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Lists.png"))); // NOI18N
         btnSanPham.setText("Sản Phẩm");
         btnSanPham.setFocusable(false);
         btnSanPham.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -120,7 +120,7 @@ public class EduFrame extends javax.swing.JFrame {
         jToolBar1.add(btnSanPham);
         jToolBar1.add(jSeparator3);
 
-        btnLoaiSanPham.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Conference.png"))); // NOI18N
+        btnLoaiSanPham.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Conference.png"))); // NOI18N
         btnLoaiSanPham.setText("Loại Sản Phẩm");
         btnLoaiSanPham.setFocusable(false);
         btnLoaiSanPham.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -133,7 +133,7 @@ public class EduFrame extends javax.swing.JFrame {
         jToolBar1.add(btnLoaiSanPham);
         jToolBar1.add(jSeparator4);
 
-        btnNguoiDung.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Certificate.png"))); // NOI18N
+        btnNguoiDung.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Certificate.png"))); // NOI18N
         btnNguoiDung.setText("Người Dùng");
         btnNguoiDung.setFocusable(false);
         btnNguoiDung.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -147,7 +147,7 @@ public class EduFrame extends javax.swing.JFrame {
         jToolBar1.add(jSeparator5);
         jToolBar1.add(jSeparator6);
 
-        btnThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Globe.png"))); // NOI18N
+        btnThongKe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Globe.png"))); // NOI18N
         btnThongKe.setText("Thống Kê");
         btnThongKe.setFocusable(false);
         btnThongKe.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -160,9 +160,9 @@ public class EduFrame extends javax.swing.JFrame {
         jToolBar1.add(btnThongKe);
         jToolBar1.add(jSeparator7);
 
-        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/poly.png"))); // NOI18N
+        lblLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/poly.png"))); // NOI18N
 
-        lblDongHo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Alarm.png"))); // NOI18N
+        lblDongHo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Alarm.png"))); // NOI18N
         lblDongHo.setText("13:49:25 PM");
 
         javax.swing.GroupLayout pnlTrangThaiLayout = new javax.swing.GroupLayout(pnlTrangThai);
@@ -177,21 +177,21 @@ public class EduFrame extends javax.swing.JFrame {
             pnlTrangThaiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTrangThaiLayout.createSequentialGroup()
                 .addComponent(lblDongHo)
-                .addGap(0, 8, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        lblTrangThai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Info.png"))); // NOI18N
+        lblTrangThai.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Info.png"))); // NOI18N
         lblTrangThai.setText("Hệ quản lý đào tạo");
 
         mnuHeThong.setText("Hệ thống");
 
         mniDangNhap.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_L, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mniDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Key.png"))); // NOI18N
+        mniDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Key.png"))); // NOI18N
         mniDangNhap.setText("Đăng nhập");
         mnuHeThong.add(mniDangNhap);
 
         mniDangXuat.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mniDangXuat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Exit.png"))); // NOI18N
+        mniDangXuat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Exit.png"))); // NOI18N
         mniDangXuat.setText("Đăng xuất");
         mniDangXuat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -200,7 +200,7 @@ public class EduFrame extends javax.swing.JFrame {
         });
         mnuHeThong.add(mniDangXuat);
 
-        mniDoiMatKhau.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Refresh.png"))); // NOI18N
+        mniDoiMatKhau.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Refresh.png"))); // NOI18N
         mniDoiMatKhau.setText("Đổi mật khẩu");
         mniDoiMatKhau.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -210,7 +210,7 @@ public class EduFrame extends javax.swing.JFrame {
         mnuHeThong.add(mniDoiMatKhau);
 
         mniKetThuc.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F10, 0));
-        mniKetThuc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Stop.png"))); // NOI18N
+        mniKetThuc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Stop.png"))); // NOI18N
         mniKetThuc.setText("Kết thúc");
         mniKetThuc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -224,27 +224,27 @@ public class EduFrame extends javax.swing.JFrame {
         mnuQuanLy.setText("Quản lý");
 
         mniChuyenDe.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mniChuyenDe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Lists.png"))); // NOI18N
+        mniChuyenDe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Lists.png"))); // NOI18N
         mniChuyenDe.setText("Chuyên đề");
         mnuQuanLy.add(mniChuyenDe);
 
         mniNguoiHoc.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mniNguoiHoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Conference.png"))); // NOI18N
+        mniNguoiHoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Conference.png"))); // NOI18N
         mniNguoiHoc.setText("Người học");
         mnuQuanLy.add(mniNguoiHoc);
 
         mniKhoaHoc.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mniKhoaHoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Certificate.png"))); // NOI18N
+        mniKhoaHoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Certificate.png"))); // NOI18N
         mniKhoaHoc.setText("Khoá học");
         mnuQuanLy.add(mniKhoaHoc);
 
         mniHocVien.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mniHocVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/User.png"))); // NOI18N
+        mniHocVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/User.png"))); // NOI18N
         mniHocVien.setText("Học viên");
         mnuQuanLy.add(mniHocVien);
 
         mniNhanVien.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, java.awt.event.InputEvent.CTRL_DOWN_MASK));
-        mniNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/User group.png"))); // NOI18N
+        mniNhanVien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/User group.png"))); // NOI18N
         mniNhanVien.setText("Nhân viên");
         mnuQuanLy.add(mniNhanVien);
 
@@ -253,7 +253,7 @@ public class EduFrame extends javax.swing.JFrame {
         mnuThongKe.setText("Thống kê");
 
         mniBangDiem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mniBangDiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Card file.png"))); // NOI18N
+        mniBangDiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Card file.png"))); // NOI18N
         mniBangDiem.setText("Bảng điểm khoá học");
         mniBangDiem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -263,7 +263,7 @@ public class EduFrame extends javax.swing.JFrame {
         mnuThongKe.add(mniBangDiem);
 
         mniLuongNguoiHoc.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mniLuongNguoiHoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Clien list.png"))); // NOI18N
+        mniLuongNguoiHoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Clien list.png"))); // NOI18N
         mniLuongNguoiHoc.setText("Người học từng năm");
         mniLuongNguoiHoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -273,7 +273,7 @@ public class EduFrame extends javax.swing.JFrame {
         mnuThongKe.add(mniLuongNguoiHoc);
 
         mniDiemChuyenDe.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mniDiemChuyenDe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Bar chart.png"))); // NOI18N
+        mniDiemChuyenDe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Bar chart.png"))); // NOI18N
         mniDiemChuyenDe.setText("Điểm từng khoá học");
         mniDiemChuyenDe.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -283,7 +283,7 @@ public class EduFrame extends javax.swing.JFrame {
         mnuThongKe.add(mniDiemChuyenDe);
 
         mniDoangThu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mniDoangThu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Dollar.png"))); // NOI18N
+        mniDoangThu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Dollar.png"))); // NOI18N
         mniDoangThu.setText("Doanh thu từng chuyên đề");
         mniDoangThu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -297,7 +297,7 @@ public class EduFrame extends javax.swing.JFrame {
         mnuTroGiup.setText("Trợ giúp");
 
         mniHuongDan.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
-        mniHuongDan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Globe.png"))); // NOI18N
+        mniHuongDan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Globe.png"))); // NOI18N
         mniHuongDan.setText("Hướng dẫn sử dụng");
         mniHuongDan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -306,7 +306,7 @@ public class EduFrame extends javax.swing.JFrame {
         });
         mnuTroGiup.add(mniHuongDan);
 
-        mniGioiThieu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Brick house.png"))); // NOI18N
+        mniGioiThieu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Brick house.png"))); // NOI18N
         mniGioiThieu.setText("Giới thiệu sản phẩm");
         mniGioiThieu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -323,7 +323,7 @@ public class EduFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 484, Short.MAX_VALUE)
+            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(4, 4, 4)
                 .addComponent(lblTrangThai)
@@ -502,8 +502,9 @@ public class EduFrame extends javax.swing.JFrame {
     // End of variables declaration//GEN-END:variables
 
     private void init() {
-        setIconImage(XImage.getAppIcon());
+        //setIconImage(XImage.getAppIcon());
         this.setLocationRelativeTo(null);
+//        new ChaoJDialog(this, true).setVisible(true);
         new DangNhapJDialog(this, true).setVisible(true);
         this.startDongHo();
     }

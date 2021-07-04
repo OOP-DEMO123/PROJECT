@@ -25,7 +25,7 @@ public class XImage {
      * Ảnh biểu tượng của ứng dụng, xuất hiện trên mọi cửa sổ
      */
     public static Image getAppIcon(){
-        String file = "/com/edusys/icon/fpt.png";
+        String file = "/com/poly/icon/fpt.png";
         return new ImageIcon(XImage.class.getResource(file)).getImage();
     }
     

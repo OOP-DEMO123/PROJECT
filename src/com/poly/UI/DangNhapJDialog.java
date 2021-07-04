@@ -6,7 +6,6 @@
 package com.poly.UI;
 
 import com.poly.dao.NguoiDungDAO;
-
 import com.poly.entity.NguoiDung;
 import com.poly.utils.Auth;
 import com.poly.utils.MsgBox;
@@ -64,7 +63,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
             }
         });
 
-        btnDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Key.png"))); // NOI18N
+        btnDangNhap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Key.png"))); // NOI18N
         btnDangNhap.setText("Đăng nhập");
         btnDangNhap.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnDangNhap.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -76,7 +75,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
 
         jLabel3.setText("Mật khẩu");
 
-        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/Exit.png"))); // NOI18N
+        btnExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Exit.png"))); // NOI18N
         btnExit.setText("Kết thúc");
         btnExit.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnExit.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
@@ -87,7 +86,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
         });
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/edusys/icon/security.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/security.png"))); // NOI18N
         jLabel4.setPreferredSize(new java.awt.Dimension(280, 280));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -214,6 +213,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
 
     void init(){
         setLocationRelativeTo(null);
+        
         this.setResizable(false);
     }
     

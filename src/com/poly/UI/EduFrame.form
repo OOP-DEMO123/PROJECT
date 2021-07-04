@@ -15,7 +15,7 @@
                   <KeyStroke key="Ctrl+L"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Key.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Key.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng nh&#x1ead;p"/>
               </Properties>
@@ -26,7 +26,7 @@
                   <KeyStroke key="Ctrl+O"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Exit.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Exit.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng xu&#x1ea5;t"/>
               </Properties>
@@ -37,7 +37,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniDoiMatKhau">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Refresh.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Refresh.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x110;&#x1ed5;i m&#x1ead;t kh&#x1ea9;u"/>
               </Properties>
@@ -51,7 +51,7 @@
                   <KeyStroke key="F10"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Stop.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Stop.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="K&#x1ebf;t th&#xfa;c"/>
               </Properties>
@@ -72,7 +72,7 @@
                   <KeyStroke key="Ctrl+F1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Lists.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Lists.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Chuy&#xea;n &#x111;&#x1ec1;"/>
               </Properties>
@@ -83,7 +83,7 @@
                   <KeyStroke key="Ctrl+F2"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Conference.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Conference.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i h&#x1ecd;c"/>
               </Properties>
@@ -94,7 +94,7 @@
                   <KeyStroke key="Ctrl+F3"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Certificate.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Certificate.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Kho&#xe1; h&#x1ecd;c"/>
               </Properties>
@@ -105,7 +105,7 @@
                   <KeyStroke key="Ctrl+F4"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/User.png"/>
+                  <Image iconType="3" name="/com/poly/icon/User.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="H&#x1ecd;c vi&#xea;n"/>
               </Properties>
@@ -116,7 +116,7 @@
                   <KeyStroke key="Ctrl+F5"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/User group.png"/>
+                  <Image iconType="3" name="/com/poly/icon/User group.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Nh&#xe2;n vi&#xea;n"/>
               </Properties>
@@ -134,7 +134,7 @@
                   <KeyStroke key="Shift+F1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Card file.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Card file.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="B&#x1ea3;ng &#x111;i&#x1ec3;m kho&#xe1; h&#x1ecd;c"/>
               </Properties>
@@ -148,7 +148,7 @@
                   <KeyStroke key="Shift+F2"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Clien list.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Clien list.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i h&#x1ecd;c t&#x1eeb;ng n&#x103;m"/>
               </Properties>
@@ -162,7 +162,7 @@
                   <KeyStroke key="Shift+F3"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Bar chart.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Bar chart.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="&#x110;i&#x1ec3;m t&#x1eeb;ng kho&#xe1; h&#x1ecd;c"/>
               </Properties>
@@ -176,7 +176,7 @@
                   <KeyStroke key="Shift+F4"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Dollar.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Dollar.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Doanh thu t&#x1eeb;ng chuy&#xea;n &#x111;&#x1ec1;"/>
               </Properties>
@@ -197,7 +197,7 @@
                   <KeyStroke key="F1"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Globe.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Globe.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="H&#x1b0;&#x1edb;ng d&#x1eab;n s&#x1eed; d&#x1ee5;ng"/>
               </Properties>
@@ -208,7 +208,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="mniGioiThieu">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/edusys/icon/Brick house.png"/>
+                  <Image iconType="3" name="/com/poly/icon/Brick house.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Gi&#x1edb;i thi&#x1ec7;u s&#x1ea3;n ph&#x1ea9;m"/>
               </Properties>
@@ -245,7 +245,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jToolBar1" pref="484" max="32767" attributes="0"/>
+          <Component id="jToolBar1" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
               <Component id="lblTrangThai" min="-2" max="-2" attributes="0"/>
@@ -286,7 +286,7 @@
         <Component class="javax.swing.JButton" name="btnDangNhap">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/edusys/icon/Exit.png"/>
+              <Image iconType="3" name="/com/poly/icon/Closed door.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="&#x110;&#x103;ng nh&#x1ead;p"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -302,7 +302,7 @@
         <Component class="javax.swing.JButton" name="btnKetThuc">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/edusys/icon/Stop.png"/>
+              <Image iconType="3" name="/com/poly/icon/Open door.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="K&#x1ebf;t th&#xfa;c"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -318,7 +318,7 @@
         <Component class="javax.swing.JButton" name="btnSanPham">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/edusys/icon/Lists.png"/>
+              <Image iconType="3" name="/com/poly/icon/Lists.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="S&#x1ea3;n Ph&#x1ea9;m"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -334,7 +334,7 @@
         <Component class="javax.swing.JButton" name="btnLoaiSanPham">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/edusys/icon/Conference.png"/>
+              <Image iconType="3" name="/com/poly/icon/Conference.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Lo&#x1ea1;i S&#x1ea3;n Ph&#x1ea9;m"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -350,7 +350,7 @@
         <Component class="javax.swing.JButton" name="btnNguoiDung">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/edusys/icon/Certificate.png"/>
+              <Image iconType="3" name="/com/poly/icon/Certificate.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Ng&#x1b0;&#x1edd;i D&#xf9;ng"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -368,7 +368,7 @@
         <Component class="javax.swing.JButton" name="btnThongKe">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/edusys/icon/Globe.png"/>
+              <Image iconType="3" name="/com/poly/icon/Globe.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Th&#x1ed1;ng K&#xea;"/>
             <Property name="focusable" type="boolean" value="false"/>
@@ -386,7 +386,7 @@
     <Component class="javax.swing.JLabel" name="lblLogo">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/edusys/icon/poly.png"/>
+          <Image iconType="3" name="/com/poly/icon/poly.png"/>
         </Property>
       </Properties>
     </Component>
@@ -405,7 +405,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <Component id="lblDongHo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="8" max="32767" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -414,7 +414,7 @@
         <Component class="javax.swing.JLabel" name="lblDongHo">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/edusys/icon/Alarm.png"/>
+              <Image iconType="3" name="/com/poly/icon/Alarm.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="13:49:25 PM"/>
           </Properties>
@@ -424,7 +424,7 @@
     <Component class="javax.swing.JLabel" name="lblTrangThai">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/com/edusys/icon/Info.png"/>
+          <Image iconType="3" name="/com/poly/icon/Info.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="H&#x1ec7; qu&#x1ea3;n l&#xfd; &#x111;&#xe0;o t&#x1ea1;o"/>
       </Properties>

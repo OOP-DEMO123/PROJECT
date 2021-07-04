@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.poly.utils;
 
 import java.sql.Connection;
@@ -11,16 +6,13 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author vuong
- */
 public class XJdbc {
+
     private static String driver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    private static String dburl = "jdbc:sqlserver://localhost:1433;database= java";
+    private static String dburl = "jdbc:sqlserver://localhost:1433;database=java";
     private static String username = "sa";
     private static String password = "123";
-    
+
     static {
         try {
             Class.forName(driver);
@@ -79,4 +71,3 @@ public class XJdbc {
         }
     }
 }
-
