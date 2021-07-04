@@ -67,11 +67,6 @@ public class EduFrame extends javax.swing.JFrame {
         mniKhoaHoc = new javax.swing.JMenuItem();
         mniHocVien = new javax.swing.JMenuItem();
         mniNhanVien = new javax.swing.JMenuItem();
-        mnuThongKe = new javax.swing.JMenu();
-        mniBangDiem = new javax.swing.JMenuItem();
-        mniLuongNguoiHoc = new javax.swing.JMenuItem();
-        mniDiemChuyenDe = new javax.swing.JMenuItem();
-        mniDoangThu = new javax.swing.JMenuItem();
         mnuTroGiup = new javax.swing.JMenu();
         mniHuongDan = new javax.swing.JMenuItem();
         mniGioiThieu = new javax.swing.JMenuItem();
@@ -250,50 +245,6 @@ public class EduFrame extends javax.swing.JFrame {
 
         jMenuBar1.add(mnuQuanLy);
 
-        mnuThongKe.setText("Thống kê");
-
-        mniBangDiem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mniBangDiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Card file.png"))); // NOI18N
-        mniBangDiem.setText("Bảng điểm khoá học");
-        mniBangDiem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniBangDiemActionPerformed(evt);
-            }
-        });
-        mnuThongKe.add(mniBangDiem);
-
-        mniLuongNguoiHoc.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mniLuongNguoiHoc.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Clien list.png"))); // NOI18N
-        mniLuongNguoiHoc.setText("Người học từng năm");
-        mniLuongNguoiHoc.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniLuongNguoiHocActionPerformed(evt);
-            }
-        });
-        mnuThongKe.add(mniLuongNguoiHoc);
-
-        mniDiemChuyenDe.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mniDiemChuyenDe.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Bar chart.png"))); // NOI18N
-        mniDiemChuyenDe.setText("Điểm từng khoá học");
-        mniDiemChuyenDe.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniDiemChuyenDeActionPerformed(evt);
-            }
-        });
-        mnuThongKe.add(mniDiemChuyenDe);
-
-        mniDoangThu.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.SHIFT_DOWN_MASK));
-        mniDoangThu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/poly/icon/Dollar.png"))); // NOI18N
-        mniDoangThu.setText("Doanh thu từng chuyên đề");
-        mniDoangThu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mniDoangThuActionPerformed(evt);
-            }
-        });
-        mnuThongKe.add(mniDoangThu);
-
-        jMenuBar1.add(mnuThongKe);
-
         mnuTroGiup.setText("Trợ giúp");
 
         mniHuongDan.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
@@ -360,11 +311,6 @@ public class EduFrame extends javax.swing.JFrame {
         this.ketThuc();
     }//GEN-LAST:event_mniKetThucActionPerformed
 
-    private void mniBangDiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniBangDiemActionPerformed
-        // TODO add your handling code here:
-        this.openThongKe(0);
-    }//GEN-LAST:event_mniBangDiemActionPerformed
-
     private void mniDangXuatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDangXuatActionPerformed
         // TODO add your handling code here:
         this.dangXuat();
@@ -385,21 +331,6 @@ public class EduFrame extends javax.swing.JFrame {
         this.openNguoiDung();
     }//GEN-LAST:event_btnNguoiDungActionPerformed
 
-    private void mniLuongNguoiHocActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniLuongNguoiHocActionPerformed
-        // TODO add your handling code here:
-        this.openThongKe(1);
-    }//GEN-LAST:event_mniLuongNguoiHocActionPerformed
-
-    private void mniDiemChuyenDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDiemChuyenDeActionPerformed
-        // TODO add your handling code here:
-        this.openThongKe(2);
-    }//GEN-LAST:event_mniDiemChuyenDeActionPerformed
-
-    private void mniDoangThuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniDoangThuActionPerformed
-        // TODO add your handling code here:
-        this.openThongKe(3);
-    }//GEN-LAST:event_mniDoangThuActionPerformed
-
     private void mniGioiThieuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniGioiThieuActionPerformed
         // TODO add your handling code here:
         
@@ -412,7 +343,7 @@ public class EduFrame extends javax.swing.JFrame {
 
     private void btnThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThongKeActionPerformed
         // TODO add your handling code here:
-        this.openThongKe(WIDTH);
+        this.openThongKe(0);
     }//GEN-LAST:event_btnThongKeActionPerformed
 
     private void btnKetThucActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKetThucActionPerformed
@@ -479,24 +410,19 @@ public class EduFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lblDongHo;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblTrangThai;
-    private javax.swing.JMenuItem mniBangDiem;
     private javax.swing.JMenuItem mniChuyenDe;
     private javax.swing.JMenuItem mniDangNhap;
     private javax.swing.JMenuItem mniDangXuat;
-    private javax.swing.JMenuItem mniDiemChuyenDe;
-    private javax.swing.JMenuItem mniDoangThu;
     private javax.swing.JMenuItem mniDoiMatKhau;
     private javax.swing.JMenuItem mniGioiThieu;
     private javax.swing.JMenuItem mniHocVien;
     private javax.swing.JMenuItem mniHuongDan;
     private javax.swing.JMenuItem mniKetThuc;
     private javax.swing.JMenuItem mniKhoaHoc;
-    private javax.swing.JMenuItem mniLuongNguoiHoc;
     private javax.swing.JMenuItem mniNguoiHoc;
     private javax.swing.JMenuItem mniNhanVien;
     private javax.swing.JMenu mnuHeThong;
     private javax.swing.JMenu mnuQuanLy;
-    private javax.swing.JMenu mnuThongKe;
     private javax.swing.JMenu mnuTroGiup;
     private javax.swing.JPanel pnlTrangThai;
     // End of variables declaration//GEN-END:variables
@@ -554,16 +480,8 @@ public class EduFrame extends javax.swing.JFrame {
     }
 
     void openThongKe(int index) {
-        if (Auth.isLogin()) {
-            if (index == 3 && !Auth.isManager()) {
-                MsgBox.alert(this, "Bạn không có quyền xem thông tin doanh thu");
-                return;
-            }
             ThongKeJDialog tkwin = new ThongKeJDialog(this, true);
             tkwin.selectTab(index);
             tkwin.setVisible(true);
-        } else {
-            MsgBox.alert(this, "Vui lòng đăng nhập!");
-        }
     }
 }

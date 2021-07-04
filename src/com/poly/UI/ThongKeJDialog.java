@@ -5,11 +5,11 @@
  */
 package com.poly.UI;
 
+import com.poly.dao.LoaiSanPhamDAO;
 import com.poly.dao.SanPhamDAO;
-import com.poly.dao.NguoiDungDAO;
-import com.poly.utils.Auth;
-import com.poly.entity.NguoiDung;
+import com.poly.entity.LoaiSanPham;
 import com.poly.entity.SanPham;
+import com.poly.utils.MsgBox;
 import java.util.List;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JLabel;
@@ -44,7 +44,7 @@ public class ThongKeJDialog extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        cboSanPham = new javax.swing.JComboBox<>();
+        cboLoaiSanPham = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblSanPham = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
@@ -59,15 +59,16 @@ public class ThongKeJDialog extends javax.swing.JDialog {
 
         jPanel6.setLayout(new java.awt.BorderLayout());
 
-        jLabel2.setText("KHÓA HỌC: ");
+        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
+        jLabel2.setText("LOẠI");
         jPanel6.add(jLabel2, java.awt.BorderLayout.LINE_START);
 
-        cboSanPham.addActionListener(new java.awt.event.ActionListener() {
+        cboLoaiSanPham.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cboSanPhamActionPerformed(evt);
+                cboLoaiSanPhamActionPerformed(evt);
             }
         });
-        jPanel6.add(cboSanPham, java.awt.BorderLayout.CENTER);
+        jPanel6.add(cboLoaiSanPham, java.awt.BorderLayout.PAGE_END);
 
         jPanel1.add(jPanel6, java.awt.BorderLayout.PAGE_START);
 
@@ -168,10 +169,10 @@ public class ThongKeJDialog extends javax.swing.JDialog {
         
     }//GEN-LAST:event_tblSanPhamMouseClicked
 
-    private void cboSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboSanPhamActionPerformed
+    private void cboLoaiSanPhamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cboLoaiSanPhamActionPerformed
         // TODO add your handling code here:
-        fillTableBangDiem();
-    }//GEN-LAST:event_cboSanPhamActionPerformed
+        //fillTableLoaiSanPham();
+    }//GEN-LAST:event_cboLoaiSanPhamActionPerformed
 
     private void tblNguoiDungMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblNguoiDungMouseClicked
         // TODO add your handling code here:
@@ -222,7 +223,7 @@ public class ThongKeJDialog extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> cboSanPham;
+    private javax.swing.JComboBox<String> cboLoaiSanPham;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
@@ -236,18 +237,16 @@ public class ThongKeJDialog extends javax.swing.JDialog {
     // End of variables declaration//GEN-END:variables
 
     SanPhamDAO dao = new SanPhamDAO();
-    NguoiDungDAO khdao = new NguoiDungDAO();
+    LoaiSanPhamDAO lspdao = new LoaiSanPhamDAO();
 
     void init() {
         setLocationRelativeTo(null);
         setSize(600,600);
-        fillComboBoxSanPham();
-        fillTableBangDiem();
+        fillComboBoxLoaiSanPham();
+        //fillTableLoaiSanPham();
 
         this.selectTab(0);
-        if (!Auth.isManager()) {
-            tabs.remove(3);
-        }
+        
 
         tblSanPham.getColumnModel().getColumn(0).setMaxWidth(100);
         tblSanPham.getColumnModel().getColumn(2).setMaxWidth(70);
@@ -264,22 +263,47 @@ public class ThongKeJDialog extends javax.swing.JDialog {
 
     }
 
+    void fillTable() {
+        DefaultTableModel model = (DefaultTableModel) tblSanPham.getModel();
+        model.setRowCount(0);
+        
+    }
+    
     public void selectTab(int index) {
         tabs.setSelectedIndex(index);
     }
 
-    void fillComboBoxSanPham() {
-        DefaultComboBoxModel model = (DefaultComboBoxModel) cboSanPham.getModel();
+    void fillComboBoxLoaiSanPham() {
+        DefaultComboBoxModel model = (DefaultComboBoxModel) cboLoaiSanPham.getModel();
         model.removeAllElements();
-        List<NguoiDung> list = khdao.selectAll();
-        
+        List<LoaiSanPham> list = lspdao.selectAll();
+        for(LoaiSanPham lsp : list){
+            model.addElement(lsp.getTenLSP());
+        }
     }
-
-    void fillTableBangDiem() {
-        DefaultTableModel model = (DefaultTableModel) tblSanPham.getModel();
-        model.setRowCount(0);
-        SanPham kh = (SanPham) cboSanPham.getSelectedItem();
-    }
+//
+//    void fillTableLoaiSanPham() {
+//        DefaultTableModel model = (DefaultTableModel) tblSanPham.getModel();
+//        model.setRowCount(0);
+//        LoaiSanPham kh = (LoaiSanPham) cboLoaiSanPham.getSelectedItem();
+//        try {
+//            List<SanPham> list = dao.selectById(kh);
+//            for (SanPham sp : list) {
+//                Object[] row = {
+//                    sp.getMaSP(),
+//                    sp.getTenSP(),
+//                    sp.getSoLuong(),
+//                    sp.getDonGia(),
+//                    sp.getHinh(),
+//                    sp.getMaLoaiSP()
+//                };
+//                model.addRow(row);
+//            }
+//        } 
+//        catch (Exception e) {
+//            MsgBox.alert(this, "Lỗi truy vấn dữ liệu!");
+//        }
+//    }
 
 
 }

@@ -5,6 +5,7 @@
  */
 package com.poly.dao;
 
+import com.poly.entity.LoaiSanPham;
 import com.poly.entity.SanPham;
 import com.poly.utils.XJdbc;
 import java.util.ArrayList;
@@ -54,7 +55,7 @@ public class SanPhamDAO extends DADAO<SanPham, String>{
     
     @Override
     public SanPham selectById(String MaSP) {
-                String sql="SELECT * FROM product WHERE IdProduct=?";
+        String sql="SELECT * FROM product WHERE IdProduct=?";
         List<SanPham> list = this.selectBySql(sql, MaSP);
         return list.size() > 0 ? list.get(0) : null;
     }
@@ -84,5 +85,17 @@ public class SanPhamDAO extends DADAO<SanPham, String>{
             throw new RuntimeException();
         }
         return list;
+    }
+
+    public List<SanPham> selectById(LoaiSanPham kh) {
+        String sql="SELECT * FROM product WHERE IdCategory=?";
+        List<SanPham> list = this.selectBySql(sql, kh);
+        return selectBySql(sql);
+    }
+
+    public List<SanPham> selectById(SanPham MaSP) {
+        String sql = "SELECT * FROM product WHERE IdCategory=?";
+        List<SanPham> list = this.selectBySql(sql, MaSP);
+        return selectBySql(sql);
     }
 }
