@@ -6,32 +6,83 @@
 package com.poly.dao;
 
 import com.poly.entity.SanPham;
+import com.poly.utils.XJdbc;
+import java.util.ArrayList;
 import java.util.List;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
  * @author diemp
  */
-public class SanPhamDAO {
-
+public class SanPhamDAO extends DADAO<SanPham, String>{
+    
+    @Override
     public List<SanPham> selectAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void insert(SanPham model) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void update(SanPham model) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void delete(String macd) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public SanPham selectById(String macd) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "SELECT * FROM product";
+        return selectBySql(sql);
     }
     
+    @Override
+    public void insert(SanPham entity) {
+        String sql = "INSERT INTO product (IdProduct,NameProduct,Amount,Price,Image,IdCategory) VALUES (?,?,?,?,?,?)";
+        XJdbc.update(sql, entity.getMaSP(), 
+                          entity.getTenSP(),
+                          entity.getSoLuong(),
+                          entity.getDonGia(),
+                          entity.getHinh(),
+                          entity.getMaLoaiSP());
+    }
+
+    @Override
+    public void update(SanPham entity) {
+        String sql = "UPDATE product SET NameProduct=?,Amount=?,Price=?,Image=?,IdCategory=? WHERE IdProduct=?";
+        XJdbc.update(sql,entity.getTenSP(),
+                         entity.getSoLuong(),
+                         entity.getDonGia(),
+                         entity.getHinh(),
+                         entity.getMaLoaiSP(), 
+                         entity.getMaSP());
+    }
+
+    @Override
+    public void delete(String id) {
+        String sql = "DELETE FROM product WHERE IdProduct=?";
+        XJdbc.update(sql, id);
+    }
+    
+    @Override
+    public SanPham selectById(String MaSP) {
+                String sql="SELECT * FROM product WHERE IdProduct=?";
+        List<SanPham> list = this.selectBySql(sql, MaSP);
+        return list.size() > 0 ? list.get(0) : null;
+    }
+    
+    @Override
+    protected List<SanPham> selectBySql(String sql, Object... args) {
+        List<SanPham> list = new ArrayList<>();
+        try {
+            ResultSet rs = null;
+            try {
+                rs = XJdbc.query(sql, args);
+                while (rs.next()) {                    
+                    SanPham sp = new SanPham();
+                    sp.setMaSP(rs.getString("IdProduct"));
+                    sp.setTenSP(rs.getString("NameProduct"));
+                    sp.setSoLuong(rs.getDouble("Amount"));
+                    sp.setDonGia(rs.getDouble("Price"));
+                    sp.setHinh(rs.getString("Image"));
+                    sp.setMaLoaiSP(rs.getString("IdCategory"));
+                    list.add(sp);
+                }
+            } finally {
+                rs.getStatement().getConnection().close();
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException();
+        }
+        return list;
+    }
 }

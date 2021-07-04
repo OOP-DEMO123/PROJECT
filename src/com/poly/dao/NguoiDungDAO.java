@@ -16,61 +16,73 @@ import java.sql.SQLException;
  *
  * @author diemp
  */
-public class NguoiDungDAO {
+public class NguoiDungDAO extends DADAO<NguoiDung, String> {
 
-    public List<NguoiDung> selectAll() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    @Override
+    public void insert(NguoiDung entity) {
+        String sql = "INSERT INTO Users(username, password, image, address, email)";
+        XJdbc.update(sql,
+                entity.getTenND(),
+                entity.getMatKhau(),
+                entity.getHinh(),
+                entity.getDiaChi(),
+                entity.getEmail());
+       
     }
 
-    public void insert(NguoiDung model) {
-        String sql="INSERT INTO ChuyenDe (MaCD, TenCD, HocPhi, ThoiLuong, Hinh, MoTa) VALUES (?, ?, ?, ?, ?, ?)";
-        XJdbc.update(sql, 
-                model.getTenND(), 
-                model.getMatKhau(), 
-                model.getEmail(), 
-                model.getDiaChi(), 
-                model.getHinh(),
-                model.getVaiTro());
+    @Override
+    public void update(NguoiDung entity) {
+        String sql = "UPDATE Users SET username=?, password=?, image=?, address=?, email=?";
+         XJdbc.update(sql,
+                entity.getTenND(),
+                entity.getMatKhau(),
+                entity.getHinh(),
+                entity.getDiaChi(),
+                entity.getEmail());
     }
 
-    public void update(NguoiDung model) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    @Override
+    public void delete(String id) {
+        String sql="DELETE FROM Users WHERE Users=?";
+        XJdbc.update(sql, id);
     }
 
-    public void delete(String TenND) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    public NguoiDung selectById(String TenND) {
-                String sql="SELECT * FROM users WHERE username=?";
-        List<NguoiDung> list = this.selectBySql(sql, TenND);
+    @Override
+    public NguoiDung selectById(String id) {
+        String sql = "SELECT * FROM users WHERE username=?";
+        List<NguoiDung> list = this.selectBySql(sql, id);
         return list.size() > 0 ? list.get(0) : null;
     }
-    
-    protected List<NguoiDung> selectBySql(String sql, Object...args){
-        List<NguoiDung> list=new ArrayList<>();
+
+    @Override
+    public List<NguoiDung> selectAll() {
+        String sql = "SELECT * FROM users";
+        return selectBySql(sql);
+    }
+
+    @Override
+    public List<NguoiDung> selectBySql(String sql, Object... args) {
+        List<NguoiDung> list = new ArrayList<>();
         try {
             ResultSet rs = null;
             try {
                 rs = XJdbc.query(sql, args);
-                while(rs.next()){
-                    NguoiDung entity=new NguoiDung();
-                    entity.setTenND(rs.getString("MaNV"));
-                    entity.setMatKhau(rs.getString("MatKhau"));
-                    entity.setEmail(rs.getString("HoTen"));
-                    entity.setDiaChi(rs.getString("HoTen"));
-                    entity.setVaiTro(rs.getBoolean("VaiTro"));
+                while (rs.next()) {
+                    NguoiDung entity = new NguoiDung();
+                    entity.setTenND(rs.getString("username"));
+                    entity.setMatKhau(rs.getString("password"));
+                    entity.setHinh(rs.getString("image"));
+                    entity.setEmail(rs.getString("email"));
+                    entity.setDiaChi(rs.getString("address"));
                     list.add(entity);
                 }
-            } 
-            finally{
+            } finally {
                 rs.getStatement().getConnection().close();
             }
-        } 
-        catch (SQLException ex) {
-            ex.printStackTrace();
-            throw new RuntimeException(ex);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
         return list;
     }
+
 }

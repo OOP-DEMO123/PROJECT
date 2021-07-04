@@ -38,7 +38,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        txtMaNV = new javax.swing.JTextField();
+        txtMaND = new javax.swing.JTextField();
         txtMatKhau = new javax.swing.JPasswordField();
         btnDangNhap = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
@@ -54,7 +54,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
 
         jLabel2.setText("Tên đăng nhập");
 
-        txtMaNV.setText("vuongnm");
+        txtMaND.setText("NV01");
 
         txtMatKhau.setText("123");
         txtMatKhau.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +111,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtMatKhau, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtMaNV))
+                            .addComponent(txtMaND))
                         .addContainerGap())))
         );
         jPanel1Layout.setVerticalGroup(
@@ -120,7 +120,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtMaNV, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(txtMaND, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -207,7 +207,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField txtMaNV;
+    private javax.swing.JTextField txtMaND;
     private javax.swing.JPasswordField txtMatKhau;
     // End of variables declaration//GEN-END:variables
 
@@ -220,7 +220,7 @@ public class DangNhapJDialog extends javax.swing.JDialog {
     NguoiDungDAO dao = new NguoiDungDAO();
 
     void dangNhap() {
-        String manv = txtMaNV.getText();
+        String manv = txtMaND.getText();
         String matKhau = new String(txtMatKhau.getPassword());
         NguoiDung NguoiDung = dao.selectById(manv);
         if(NguoiDung == null){

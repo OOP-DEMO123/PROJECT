@@ -21,10 +21,12 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Admin
  */
-public class LoaiSanPhamJDialog extends javax.swing.JDialog {
+public final class LoaiSanPhamJDialog extends javax.swing.JDialog {
 
     /**
      * Creates new form LoaiSanPhamJDialog
+     * @param parent
+     * @param modal
      */
     public LoaiSanPhamJDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
@@ -349,17 +351,15 @@ public class LoaiSanPhamJDialog extends javax.swing.JDialog {
         //</editor-fold>
 
         /* Create and display the dialog */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                SanPhamJDialog dialog = new SanPhamJDialog(new javax.swing.JFrame(), true);
-                dialog.addWindowListener(new java.awt.event.WindowAdapter() {
-                    @Override
-                    public void windowClosing(java.awt.event.WindowEvent e) {
-                        System.exit(0);
-                    }
-                });
-                dialog.setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            SanPhamJDialog dialog = new SanPhamJDialog(new javax.swing.JFrame(), true);
+            dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                @Override
+                public void windowClosing(java.awt.event.WindowEvent e) {
+                    System.exit(0);
+                }
+            });
+            dialog.setVisible(true);
         });
     }
 
@@ -454,10 +454,7 @@ public class LoaiSanPhamJDialog extends javax.swing.JDialog {
     }
 
     void delete(){
-        if(!Auth.isManager()){
-            MsgBox.alert(this, "Bạn không có quyền xóa chuyên đề!");
-        }
-        else{
+        
             if(MsgBox.confirm(this, "Khi xoá loại sản phẩm\n "
                     + "bạn sẽ xoá luôn sản phẩm và người dùng liên quan đến chuyên đề.\n"
                     + "Bạn có chắc chắn muốn xoá ?")){
@@ -472,7 +469,7 @@ public class LoaiSanPhamJDialog extends javax.swing.JDialog {
                     MsgBox.alert(this, "Xóa thất bại!"+e);
                 }
             }
-        }
+        
     }
 
     void clearForm(){

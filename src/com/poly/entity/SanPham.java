@@ -10,61 +10,61 @@ package com.poly.entity;
  * @author diemp
  */
 public class SanPham {
-
-    public Object getMaCD() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Object getTenCD() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Object getHocPhi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Object getThoiLuong() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public Object getHinh() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
+    String MaSP ;
+    String TenSP ;
+    Double SoLuong;
+    Double DonGia ;
+    String Hinh ;
+    String MaLoaiSP ;
 
     public String getMaSP() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return MaSP;
+    }
+
+    public void setMaSP(String MaSP) {
+        this.MaSP = MaSP;
     }
 
     public String getTenSP() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return TenSP;
     }
 
-    public Object getSoLuong() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setTenSP(String TenSP) {
+        this.TenSP = TenSP;
     }
 
-    public Object getDonGia() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Double getSoLuong() {
+        return SoLuong;
     }
 
-    public void setMaSP(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setSoLuong(Double SoLuong) {
+        this.SoLuong = SoLuong;
     }
 
-    public void setTenSP(String text) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Double getDonGia() {
+        return DonGia;
     }
 
-    public void setSoLuong(Double valueOf) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setDonGia(Double DonGia) {
+        this.DonGia = DonGia;
     }
 
-    public void setDonGia(Double valueOf) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public String getHinh() {
+        return Hinh;
     }
 
-    public void setHinh(String toolTipText) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setHinh(String Hinh) {
+        this.Hinh = Hinh;
     }
+
+    public String getMaLoaiSP() {
+        return MaLoaiSP;
+    }
+
+    public void setMaLoaiSP(String MaLoaiSP) {
+        this.MaLoaiSP = MaLoaiSP;
+    }
+
     
 }

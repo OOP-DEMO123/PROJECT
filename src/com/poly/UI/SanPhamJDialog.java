@@ -226,7 +226,7 @@ public class SanPhamJDialog extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtMaLoai, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblHinh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMoi)
                     .addComponent(btnXoa)
@@ -279,7 +279,7 @@ public class SanPhamJDialog extends javax.swing.JDialog {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 277, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -306,7 +306,7 @@ public class SanPhamJDialog extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tabs, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tabs, javax.swing.GroupLayout.PREFERRED_SIZE, 365, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -464,13 +464,14 @@ public class SanPhamJDialog extends javax.swing.JDialog {
         model.setRowCount(0);
         try {
             List<SanPham> list = dao.selectAll();
-            for (SanPham cd : list) {
+            for (SanPham sp : list) {
                 Object[] row = {
-                    cd.getMaCD(),
-                    cd.getTenCD(),
-                    cd.getHocPhi(),
-                    cd.getThoiLuong(),
-                    cd.getHinh()
+                    sp.getMaSP(),
+                    sp.getTenSP(),
+                    sp.getSoLuong(),
+                    sp.getDonGia(),
+                    sp.getHinh(),
+                    sp.getMaLoaiSP()
                 };
                 model.addRow(row);
             }
@@ -519,28 +520,23 @@ public class SanPhamJDialog extends javax.swing.JDialog {
             MsgBox.alert(this, "Cập nhật thành công!");
         } 
         catch (Exception e) {
-            MsgBox.alert(this, "Cập nhật thất bại!");
+            MsgBox.alert(this, "Cập nhật thất bại!"+e);
         }
     }
 
     void delete(){
-        if(!Auth.isManager()){
-            MsgBox.alert(this, "Bạn không có quyền xóa chuyên đề!");
-        }
-        else{
-            if(MsgBox.confirm(this, "Khi xoá chuyên đề\n "
-                    + "bạn sẽ xoá luôn khoá học và học viên liên quan đến chuyên đề.\n"
-                    + "Bạn có chắc chắn muốn xoá ?")){
-                String macd = txtMaSP.getText();
-                try {
-                    dao.delete(macd);
-                    this.fillTable();
-                    this.clearForm();
-                    MsgBox.alert(this, "Xóa thành công!");
-                } 
-                catch (Exception e) {
-                    MsgBox.alert(this, "Xóa thất bại!"+e);
-                }
+        if(MsgBox.confirm(this, "Khi xoá chuyên đề\n "
+                + "bạn sẽ xoá luôn khoá học và học viên liên quan đến chuyên đề.\n"
+                + "Bạn có chắc chắn muốn xoá ?")){
+            String sp = txtMaSP.getText();
+            try {
+                dao.delete(sp);
+                this.fillTable();
+                this.clearForm();
+                MsgBox.alert(this, "Xóa thành công!");
+            } 
+            catch (Exception e) {
+                MsgBox.alert(this, "Xóa thất bại!"+e);
             }
         }
     }
@@ -552,31 +548,33 @@ public class SanPhamJDialog extends javax.swing.JDialog {
     }
 
     void edit() {
-        String macd = (String) tblSanPham.getValueAt(this.row, 0);
-         SanPham cd = dao.selectById(macd);
-         this.setForm(cd);
+        String MaSP = (String) tblSanPham.getValueAt(this.row, 0);
+         SanPham sp = dao.selectById(MaSP);
+         this.setForm(sp);
          this.updateStatus();
          tabs.setSelectedIndex(0);
     }
 
-    void setForm(SanPham cd){
-        txtMaSP.setText(cd.getMaSP());
-        txtTenSP.setText(cd.getTenSP());
-        txtSoLuong.setText(String.valueOf(cd.getSoLuong()));
-        txtDonGia.setText(String.valueOf(cd.getDonGia()));
-        if(cd.getHinh() != null){
-            lblHinh.setToolTipText((String) cd.getHinh());
-            lblHinh.setIcon(XImage.read((String) cd.getHinh()));
+    void setForm(SanPham sp){
+        txtMaSP.setText(sp.getMaSP());
+        txtTenSP.setText(sp.getTenSP());
+        txtSoLuong.setText(String.valueOf(sp.getSoLuong()));
+        txtDonGia.setText(String.valueOf(sp.getDonGia()));
+        if(sp.getHinh() != null){
+            lblHinh.setToolTipText((String) sp.getHinh());
+            lblHinh.setIcon(XImage.read((String) sp.getHinh()));
         }
+        txtMaLoai.setText(sp.getMaLoaiSP());
     }
     SanPham getForm(){
-        SanPham cd = new SanPham();
-        cd.setMaSP(txtMaSP.getText());
-        cd.setTenSP(txtTenSP.getText());
-        cd.setSoLuong(Double.valueOf(txtSoLuong.getText()));
-        cd.setDonGia(Double.valueOf(txtDonGia.getText()));
-        cd.setHinh(lblHinh.getToolTipText());
-        return cd;
+        SanPham sp = new SanPham();
+        sp.setMaSP(txtMaSP.getText());
+        sp.setTenSP(txtTenSP.getText());
+        sp.setSoLuong(Double.valueOf(txtSoLuong.getText()));
+        sp.setDonGia(Double.valueOf(txtDonGia.getText()));
+        sp.setHinh(lblHinh.getToolTipText());
+        sp.setMaLoaiSP(txtMaLoai.getText());
+        return sp;
     }
 
     void first(){
