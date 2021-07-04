@@ -20,7 +20,7 @@ public class NguoiDungDAO extends DADAO<NguoiDung, String> {
 
     @Override
     public void insert(NguoiDung entity) {
-        String sql = "INSERT INTO Users(username, password, image, address, email)";
+        String sql = "INSERT INTO Users(username, password, image, address, email) VALUES (?,?,?,?,?)";
         XJdbc.update(sql,
                 entity.getTenND(),
                 entity.getMatKhau(),
@@ -32,18 +32,18 @@ public class NguoiDungDAO extends DADAO<NguoiDung, String> {
 
     @Override
     public void update(NguoiDung entity) {
-        String sql = "UPDATE Users SET username=?, password=?, image=?, address=?, email=?";
+        String sql = "UPDATE Users SET  password=?, image=?, address=?, email=? WHERE username=?";
          XJdbc.update(sql,
-                entity.getTenND(),
                 entity.getMatKhau(),
                 entity.getHinh(),
                 entity.getDiaChi(),
-                entity.getEmail());
+                entity.getEmail(),
+                entity.getTenND());
     }
 
     @Override
     public void delete(String id) {
-        String sql="DELETE FROM Users WHERE Users=?";
+        String sql="DELETE FROM Users WHERE username=?";
         XJdbc.update(sql, id);
     }
 

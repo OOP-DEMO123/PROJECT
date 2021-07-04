@@ -510,10 +510,6 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
     }
 
     void delete(){
-        if(!Auth.isManager()){
-            MsgBox.alert(this, "Bạn không có quyền xóa chuyên đề!");
-        }
-        else{
             if(MsgBox.confirm(this, "Khi xoá chuyên đề\n "
                     + "bạn sẽ xoá luôn khoá học và học viên liên quan đến chuyên đề.\n"
                     + "Bạn có chắc chắn muốn xoá ?")){
@@ -528,7 +524,6 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
                     MsgBox.alert(this, "Xóa thất bại!"+e);
                 }
             }
-        }
     }
 
     void clearForm(){
