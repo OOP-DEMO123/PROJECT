@@ -414,7 +414,7 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
 
     private void btnAZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAZActionPerformed
         // TODO add your handling code here:
-        
+        this.fillTableNguoiDungAZ();
     }//GEN-LAST:event_btnAZActionPerformed
 
     private void btnZAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZAActionPerformed
