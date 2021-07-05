@@ -53,7 +53,21 @@ public class NguoiDungDAO extends DADAO<NguoiDung, String> {
         List<NguoiDung> list = this.selectBySql(sql, id);
         return list.size() > 0 ? list.get(0) : null;
     }
-
+    
+    public List<NguoiDung> selectNotInCoure(String keyword){
+        String sql = "SELECT * FROM users WHERE username like ?";
+        return selectBySql(sql, "%"+ keyword +"%");
+    }
+    
+    public List<NguoiDung> OderByDesc() {
+        String sql = "SELECT * FROM users ORDER BY username DESC ";
+        return selectBySql(sql);
+    }
+    
+    public List<NguoiDung> OderByAsc () {
+        String sql = "SELECT * FROM users ORDER BY username ASC";
+        return selectBySql(sql);
+    }
     @Override
     public List<NguoiDung> selectAll() {
         String sql = "SELECT * FROM users";
@@ -84,5 +98,8 @@ public class NguoiDungDAO extends DADAO<NguoiDung, String> {
         }
         return list;
     }
+
+    
+    
 
 }

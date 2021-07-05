@@ -6,6 +6,7 @@
 package com.poly.dao;
 
 import com.poly.entity.LoaiSanPham;
+import com.poly.entity.NguoiDung;
 import com.poly.entity.SanPham;
 import com.poly.utils.XJdbc;
 import java.util.ArrayList;
@@ -97,5 +98,13 @@ public class SanPhamDAO extends DADAO<SanPham, String>{
         String sql = "SELECT * FROM product WHERE IdCategory=?";
         List<SanPham> list = this.selectBySql(sql, MaSP);
         return selectBySql(sql);
+    }
+    public List<SanPham> OderByDesc (String NameProduct) {
+        String sql = "SELECT * FROM product ORDER BY NameProduct DESC ";
+        return this.selectBySql(sql, "%"+ NameProduct + "%");
+    }
+    public List<SanPham> OderByAsc (String NameProduct) {
+        String sql = "SELECT * FROM product ORDER BY NameProduct DESC ";
+        return this.selectBySql(sql, "%"+ NameProduct + "%");
     }
 }

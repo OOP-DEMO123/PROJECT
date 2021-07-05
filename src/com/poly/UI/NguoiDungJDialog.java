@@ -65,6 +65,10 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblNguoiDung = new javax.swing.JTable();
+        txtSearch = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        btnAZ = new javax.swing.JButton();
+        btnZA = new javax.swing.JButton();
 
         fileChooser.setDialogTitle("Chọn logo chuyên đề");
 
@@ -165,7 +169,7 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
                         .addComponent(btnXoa)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnMoi)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
                         .addComponent(btnFirst)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnPrev)
@@ -216,7 +220,7 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(lblHinh, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnMoi)
                     .addComponent(btnXoa)
@@ -256,20 +260,67 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(tblNguoiDung);
 
+        txtSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtSearchActionPerformed(evt);
+            }
+        });
+        txtSearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtSearchKeyReleased(evt);
+            }
+        });
+
+        jLabel7.setText("Search user: ");
+
+        btnAZ.setText("A-Z");
+        btnAZ.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAZActionPerformed(evt);
+            }
+        });
+
+        btnZA.setText("Z-A");
+        btnZA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnZAActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 771, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 517, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(135, 135, 135))
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(241, 241, 241)
+                .addComponent(btnAZ)
+                .addGap(96, 96, 96)
+                .addComponent(btnZA)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 235, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnAZ)
+                    .addComponent(btnZA))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -361,6 +412,26 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_tblNguoiDungMouseClicked
 
+    private void btnAZActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAZActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnAZActionPerformed
+
+    private void btnZAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnZAActionPerformed
+        // TODO add your handling code here:
+        this.fillTableNguoiDungZA();
+    }//GEN-LAST:event_btnZAActionPerformed
+
+    private void txtSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSearchActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_txtSearchActionPerformed
+
+    private void txtSearchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtSearchKeyReleased
+        // TODO add your handling code here:
+        this.fillTableSearch();
+    }//GEN-LAST:event_txtSearchKeyReleased
+
     /**
      * @param args the command line arguments
      */
@@ -407,6 +478,7 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAZ;
     private javax.swing.JButton btnFirst;
     private javax.swing.JButton btnLast;
     private javax.swing.JButton btnMoi;
@@ -415,6 +487,7 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
     private javax.swing.JButton btnXoa;
+    private javax.swing.JButton btnZA;
     private javax.swing.JFileChooser fileChooser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -422,6 +495,7 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -431,6 +505,7 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
     private javax.swing.JTextField txtDiaChi;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtMatKhau;
+    private javax.swing.JTextField txtSearch;
     private javax.swing.JTextField txtTenND;
     // End of variables declaration//GEN-END:variables
 
@@ -605,5 +680,53 @@ public class NguoiDungJDialog extends javax.swing.JDialog {
             lblHinh.setIcon(icon);
             lblHinh.setToolTipText(file.getName()); // giữ tên hình trong tooltip
         }
+    }
+    private void fillTableSearch() {
+        DefaultTableModel model = (DefaultTableModel) tblNguoiDung.getModel();
+        model.setRowCount(0);
+        String keyword = txtSearch.getText();
+        List<NguoiDung> list = dao.selectNotInCoure(keyword);
+        for (NguoiDung cd : list) {
+                Object[] row = {
+                    cd.getTenND(),
+                    cd.getMatKhau(),
+                    cd.getEmail(),
+                    cd.getDiaChi(),
+                    cd.getHinh()
+                };
+                model.addRow(row);
+            }
+    }
+    private void fillTableNguoiDungAZ() {
+        DefaultTableModel model = (DefaultTableModel) tblNguoiDung.getModel();
+        model.setRowCount(0);
+        String keyword = txtSearch.getText();
+        List<NguoiDung> list = dao.OderByDesc();
+        for (NguoiDung cd : list) {
+                Object[] row = {
+                    cd.getTenND(),
+                    cd.getMatKhau(),
+                    cd.getEmail(),
+                    cd.getDiaChi(),
+                    cd.getHinh()
+                };
+                model.addRow(row);
+            }
+    }
+    private void fillTableNguoiDungZA() {
+        DefaultTableModel model = (DefaultTableModel) tblNguoiDung.getModel();
+        model.setRowCount(0);
+        String keyword = txtSearch.getText();
+        List<NguoiDung> list = dao.OderByAsc();
+        for (NguoiDung cd : list) {
+                Object[] row = {
+                    cd.getTenND(),
+                    cd.getMatKhau(),
+                    cd.getEmail(),
+                    cd.getDiaChi(),
+                    cd.getHinh()
+                };
+                model.addRow(row);
+            }
     }
 }

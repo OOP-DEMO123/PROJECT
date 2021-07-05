@@ -281,29 +281,29 @@ public class ThongKeJDialog extends javax.swing.JDialog {
             model.addElement(lsp.getTenLSP());
         }
     }
-//
-//    void fillTableLoaiSanPham() {
-//        DefaultTableModel model = (DefaultTableModel) tblSanPham.getModel();
-//        model.setRowCount(0);
-//        LoaiSanPham kh = (LoaiSanPham) cboLoaiSanPham.getSelectedItem();
-//        try {
-//            List<SanPham> list = dao.selectById(kh);
-//            for (SanPham sp : list) {
-//                Object[] row = {
-//                    sp.getMaSP(),
-//                    sp.getTenSP(),
-//                    sp.getSoLuong(),
-//                    sp.getDonGia(),
-//                    sp.getHinh(),
-//                    sp.getMaLoaiSP()
-//                };
-//                model.addRow(row);
-//            }
-//        } 
-//        catch (Exception e) {
-//            MsgBox.alert(this, "Lỗi truy vấn dữ liệu!");
-//        }
-//    }
+
+    void fillTableLoaiSanPham() {
+        DefaultTableModel model = (DefaultTableModel) tblSanPham.getModel();
+        model.setRowCount(0);
+        LoaiSanPham kh = (LoaiSanPham) cboLoaiSanPham.getSelectedItem();
+        try {
+            List<SanPham> list = dao.selectById(kh);
+            for (SanPham sp : list) {
+                Object[] row = {
+                    sp.getMaSP(),
+                    sp.getTenSP(),
+                    sp.getSoLuong(),
+                    sp.getDonGia(),
+                    sp.getHinh(),
+                    sp.getMaLoaiSP()
+                };
+                model.addRow(row);
+            }
+        } 
+        catch (Exception e) {
+            MsgBox.alert(this, "Lỗi truy vấn dữ liệu!");
+        }
+    }
 
 
 }

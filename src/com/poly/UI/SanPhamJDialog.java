@@ -11,6 +11,8 @@ import com.poly.utils.Auth;
 import com.poly.utils.MsgBox;
 import com.poly.utils.XImage;
 import java.io.File;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -67,6 +69,8 @@ public class SanPhamJDialog extends javax.swing.JDialog {
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblSanPham = new javax.swing.JTable();
+        btnSortbyName = new javax.swing.JButton();
+        btnSortbyPrice = new javax.swing.JButton();
 
         fileChooser.setDialogTitle("Chọn logo chuyên đề");
 
@@ -266,20 +270,44 @@ public class SanPhamJDialog extends javax.swing.JDialog {
         });
         jScrollPane1.setViewportView(tblSanPham);
 
+        btnSortbyName.setText("Sắp xếp theo tên");
+        btnSortbyName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSortbyNameActionPerformed(evt);
+            }
+        });
+
+        btnSortbyPrice.setText("Sắp xếp theo đơn giá");
+        btnSortbyPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSortbyPriceActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 792, Short.MAX_VALUE)
                 .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addComponent(btnSortbyName, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnSortbyPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 315, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSortbyName)
+                    .addComponent(btnSortbyPrice))
                 .addContainerGap())
         );
 
@@ -373,6 +401,14 @@ public class SanPhamJDialog extends javax.swing.JDialog {
         }
     }//GEN-LAST:event_tblSanPhamMouseClicked
 
+    private void btnSortbyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortbyNameActionPerformed
+//        
+    }//GEN-LAST:event_btnSortbyNameActionPerformed
+
+    private void btnSortbyPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSortbyPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSortbyPriceActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -424,6 +460,8 @@ public class SanPhamJDialog extends javax.swing.JDialog {
     private javax.swing.JButton btnMoi;
     private javax.swing.JButton btnNext;
     private javax.swing.JButton btnPrev;
+    private javax.swing.JButton btnSortbyName;
+    private javax.swing.JButton btnSortbyPrice;
     private javax.swing.JButton btnSua;
     private javax.swing.JButton btnThem;
     private javax.swing.JButton btnXoa;
